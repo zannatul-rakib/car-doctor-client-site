@@ -1,0 +1,50 @@
+[
+  {
+    "id": "e649f6eb-8360-4023-a00b-dff0e475d83c",
+    "products_id": "04",
+    "title": "Car Engine Plug",
+    "img": "https://i.ibb.co/Qb7bMML/6.png",
+    "price": "20.00",
+    "rating": "4.5"
+  },
+  {
+    "id": "c75fa187-1ed5-4470-b8ef-ea50261915e0",
+    "products_id": "02",
+    "title": "Car Air Filter",
+    "img": "https://i.ibb.co/5Lg6F3p/3.png",
+    "price": "30.00",
+    "rating": "4.9"
+  },
+  {
+    "id": "dac7fd83-3380-4fa4-9f24-67c4a09d33d7",
+    "products_id": "05",
+    "title": "Cool Car Engine",
+    "img": "https://i.ibb.co/C1FHzZb/1.png",
+    "price": "70.00",
+    "rating": "4.7"
+  },
+  {
+    "id": "6731a5fe-3a58-4851-b324-02b3518a663b",
+    "products_id": "01",
+    "title": "Cools Car Gear",
+    "img": "https://i.ibb.co/BLWbgSC/2.png",
+    "price": "90.00",
+    "rating": "4.4"
+  },
+  {
+    "id": "241f48af-1b82-4a1d-ace0-3c28b662e4fd",
+    "products_id": "06",
+    "title": "Cools Car Tier",
+    "img": "https://i.ibb.co/Cvzh3rZ/5.png",
+    "price": "10.00",
+    "rating": "4.4"
+  },
+  {
+    "id": "c7147b21-33e1-4f75-9720-aab259f5899f",
+    "products_id": "03",
+    "title": "Cools Car Battery",
+    "img": "https://i.ibb.co/RPr15Qd/4.png",
+    "price": "40.00",
+    "rating": "4.4"
+  }
+]
