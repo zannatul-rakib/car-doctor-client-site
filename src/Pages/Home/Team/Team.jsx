@@ -5,7 +5,7 @@ const Team = () => {
     const [teams, setTeams] = useState([])
 
     useEffect(() => {
-        fetch('team.json')
+        fetch('http://localhost:5000/team')
             .then(res => res.json())
             .then(data => setTeams(data))
     },[])
@@ -19,7 +19,7 @@ const Team = () => {
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                 {
-                    teams.map(team => <TeamCard key={ team.id} team={team} />)                      
+                    teams.map(team => <TeamCard key={ team._id} team={team} />)                      
                 }
             </div>
         </div>
