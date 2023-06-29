@@ -8,7 +8,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser, googleSignIn } = useContext(AuthContext)
     
     const handleUserCreate = (event) => {
         event.preventDefault();
@@ -28,6 +28,14 @@ const Register = () => {
             .catch(error => console.log(error))
     }
 
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+        .then(result => {
+            const newUser = result.user;
+            console.log(newUser);
+        })
+        .catch(error => console.log(error))
+    }
 
     return (
         <div className="container mx-auto">
@@ -65,10 +73,16 @@ const Register = () => {
                         </div>
                         <div className="text-center mt-2 mb-4">
                             <p>Or Register with</p>
-                            <div>
-                                <span><FcGoogle /></span>
-                                <span><BiLogoFacebook /></span>
-                                <span><PiGithubLogoFill /></span>
+                            <div className="my-5 space-x-2">
+                                <button onClick={handleGoogleSignIn} className="btn btn-circle btn-outline">
+                                    <FcGoogle />
+                                </button>
+                                <button className="btn btn-circle btn-outline">
+                                <BiLogoFacebook />
+                                </button>
+                                <button className="btn btn-circle btn-outline">
+                                <PiGithubLogoFill />
+                                </button>
                             </div>
                             <p className="my-5 text-xs">Already have an account Please <Link className="link text-[#FF3811]" to="/login">Login</Link></p>
                         </div> 

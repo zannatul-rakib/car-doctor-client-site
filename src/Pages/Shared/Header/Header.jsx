@@ -20,7 +20,9 @@ const Header = () => {
   
   const handleeLogout = () => {
     logOut()
-      .then(console.log('user logout'))
+      .then(() => {
+        localStorage.removeItem('jwt-token');
+      })
       .catch(error => console.log(error))
     
   }

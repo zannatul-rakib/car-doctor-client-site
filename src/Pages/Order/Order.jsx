@@ -2,17 +2,31 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import checkImage from "../../assets/images/checkout/checkout.png"
 import OrderDataTable from "./OrderDataTable";
+import { useNavigate } from "react-router-dom";
 
 
 const Order = () => {
     const { user } = useContext(AuthContext)
     const [orderData, setOrderData] = useState([])
+    const navigate = useNavigate();
     
     const url = `http://localhost:5000/order?email=${user?.email}`
     useEffect(() => {
-        fetch(url)
+        fetch(url, {
+            method: "GET",
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('jwt-token')}`
+            }
+        })
             .then(res => res.json())
-            .then(data => setOrderData(data))
+            .then(data => {
+                if (!data.error) {
+                    setOrderData(data)
+                }
+                else {
+                    navigate('/');
+                }
+            })
     }, [url])
 
     const handleDelete = id => {
