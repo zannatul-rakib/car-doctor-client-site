@@ -5,7 +5,7 @@ const Team = () => {
     const [teams, setTeams] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/team')
+        fetch('https://car-doctor-server-running.vercel.app/team')
             .then(res => res.json())
             .then(data => setTeams(data))
     },[])

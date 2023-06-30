@@ -21,7 +21,7 @@ const Header = () => {
   const handleeLogout = () => {
     logOut()
       .then(() => {
-        localStorage.removeItem('jwt-token');
+        
       })
       .catch(error => console.log(error))
     
